@@ -6,7 +6,7 @@ on:
       - main
     paths:
       - 'dockerfile'
-      - '.github/workflows/docker-image.yml'
+      - '.github/workflows/build-image.yml'
 
 env:
   REGISTRY: ghcr.io
