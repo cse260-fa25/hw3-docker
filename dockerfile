@@ -14,6 +14,9 @@ RUN apt-get update && apt-get install -y \
     libnetcdf-dev \
     ncview
 
+# Clean up apt cache to reduce image size
+RUN apt-get clean && rm -rf /var/lib/apt/lists/*
+
 # ncview font error fix
 # https://forum.endeavouros.com/t/ncview-missing-fonts-in-wayland/63258/5
 RUN echo "Ncview*font: fixed" >> ~/.Xresources
