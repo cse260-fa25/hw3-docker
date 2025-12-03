@@ -14,6 +14,10 @@ RUN apt-get update && apt-get install -y \
     libnetcdf-dev \
     ncview
 
+# HW3 correctness.sh script dependencies
+RUN apt-get update && apt-get install -y \
+    python3
+
 # ncview font error fix dependency
 # https://forum.endeavouros.com/t/ncview-missing-fonts-in-wayland/63258/5
 RUN apt-get update && apt-get install -y x11-xserver-utils
